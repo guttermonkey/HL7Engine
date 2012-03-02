@@ -45,14 +45,18 @@ while true
 	Thread.new( incoming_socket ) do |my_socket|
 		raw_input = my_socket.readlines
 		
-		# Add the raw message to the database
+		# Create a database entry for the message
 		m = Message.new
 		m.raw_input = raw_input
-		m.created_at = Time.now
-		m.save
 		
 		# Create an HL7 message object
 		message = HL7::Message.new( raw_input )
+		
+		## We should probably add some of the data from the HL7
+		## message to the database here before we save it.
+		
+		m.create_at = Time.now
+		m.save
 
 		# Forward it on
 		puts "forwarding message:\n#{message.to_s}"
