@@ -1,7 +1,6 @@
 # HL7 Engine
-## Using ruby-hl7 (https://github.com/segfault/ruby-hl7)
 
-Requirements:
+## Requirements:
 * ruby-hl7 (https://github.com/segfault/ruby-hl7)
 * thread
 * socket
