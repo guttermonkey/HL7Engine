@@ -17,7 +17,7 @@ DataMapper::Logger.new($stdout, :debug)
 
 # Set up the DataMapper connection to a localhost Postgres server
 # with a database name of hl7engine (change as appropriate)
-DataMapper.setup(:default, 'postgres://user:password@localhost/hl7engine')
+DataMapper::setup(:default, 'mysql://hl7repeater:hl7repeater@localhost/hl7repeater')
 
 # Initialize a basic class to store the data with
 class Message
