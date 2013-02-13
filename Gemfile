@@ -1,0 +1,5 @@
+source 'https://rubygems.org'
+gem 'ruby-hl7'
+gem 'thread'
+gem 'data_mapper'
+gem 'dm-mysql-adapter'

@@ -1,8 +1,8 @@
-require 'rubygems'
 require 'ruby-hl7'
 require 'thread'
 require 'socket'
 require 'data_mapper'
+require 'dm-mysql-adapter'
 
 ###
 # Set up
